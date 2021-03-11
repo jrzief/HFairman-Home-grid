@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+* {
+  box-sizing: border-box;
+  position: relative;
+  cursor: crosshair;
+}
+
+html {
+  cursor: crosshair;
+  height: 100%;
+  background: #000;
+  color: #fff;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.text-grid {
+  cursor: crosshair;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  --chars: 11;
+  text-transform: uppercase; 
+  font-size: calc(70vmin / var(--chars));
+  display: grid;
+  grid-template-columns: repeat(var(--chars), 1.2em);
+}
+
+ /* html {
+  background: rgb(10, 30, 15);
+}  */
+
+.char {
+  --d: max(0.15, var(--distance, 0));
+  opacity: var(--d);
+  display: inline-grid;
+  place-items: center;
+  //border: solid 2px red;
+  //transform: scale(calc(400 / var(--distance)));
+  //transform: (scale(max(0.25, calc(1 - (( 1 * var(--distance)) / 300) )))));
+  //transform: (scale(max(0.25,  var(--distance))));
+  transform: scale(calc(var(--d) * 1.4));
+ /*  color: rgb(
+    calc(255 * var(--d)),    //calc(255 * (1 - var(--d)))
+    0, //calc(255 * (1 - var(--d))),
+    calc(100 + (40 * var(--d)))
+  );
+  transition: color 0.2s linear; */
+}
